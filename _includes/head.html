@@ -42,6 +42,14 @@
     {% if site.enable_mathjax %}
     <script type="text/javascript" async
         src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+        MathJax.Ajax.config.path["mhchem"] =
+          "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+        MathJax.Hub.Config({
+          TeX: {
+            extensions: ["[mhchem]/mhchem.js"]
+          }
+        });
     </script>
     {% endif %}
 
